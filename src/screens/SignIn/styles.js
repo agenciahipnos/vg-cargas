@@ -1,11 +1,18 @@
 import React from 'react'
 import styled from 'styled-components/native'
 
-export const Container = styled.SafeAreaView`
-  background-color: #444A5C;
+export const Wrapper = styled.SafeAreaView`
   flex: 1;
-  justify-content: center;
+  background-color: #444A5C;
+`
+
+export const Container = styled.ScrollView`
+
+`
+
+export const LogoContent = styled.View`
   align-items: center;
+  margin-top: 40px;
 `
 
 export const InputArea = styled.View`
@@ -38,6 +45,7 @@ export const CustomButtonText = styled.Text`
 
 export const SignMessageButton = styled.TouchableOpacity`
   justify-content: center;
+  margin-bottom: 40px;
 `
 
 export const SignMessageButtonText = styled.Text`

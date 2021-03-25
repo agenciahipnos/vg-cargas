@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import {
+  Wrapper,
   Container,
+  LogoContent,
   InputArea,
   RecoverPasswordText,
   CustomButton,
@@ -20,43 +22,47 @@ const SignIn = () => {
   const [passwordField, setPasswordField] = useState('')
 
   return (
-    <Container>
-      <Logo 
-        width="129"
-        height="84" 
-      />
-      <InputArea>
-        <SignInput 
-          IconSvg={Email}
-          placeholder="Digite seu e-mail"
-          value={emailField}
-          onChangeText={(text) => setEmailField(text)}
-        />
-        <SignInput
-          IconSvg={Password}
-          placeholder="Digite sua senha"
-          value={passwordField}
-          onChangeText={(text) => setPasswordField(text)}
-          password={true}
-        />
-        <RecoverPasswordText>
-          Esqueceu sua senha?
-        </RecoverPasswordText>
-        <CustomButton>
-          <CustomButtonText>
-            Login
-          </CustomButtonText>
-        </CustomButton>
-      </InputArea>
-      <SignMessageButton>
-        <SignMessageButtonText>
-          Ainda não possui uma conta?
-        </SignMessageButtonText>
-        <SignMessageButtonTextBold>
-          Cadastre-se
-        </SignMessageButtonTextBold>
-      </SignMessageButton>
-    </Container>
+    <Wrapper>
+      <Container>
+        <LogoContent>
+          <Logo 
+            width="129"
+            height="84" 
+          />
+        </LogoContent>
+        <InputArea>
+          <SignInput 
+            IconSvg={Email}
+            placeholder="Digite seu e-mail"
+            value={emailField}
+            onChangeText={(text) => setEmailField(text)}
+          />
+          <SignInput
+            IconSvg={Password}
+            placeholder="Digite sua senha"
+            value={passwordField}
+            onChangeText={(text) => setPasswordField(text)}
+            password={true}
+          />
+          <RecoverPasswordText>
+            Esqueceu sua senha?
+          </RecoverPasswordText>
+          <CustomButton>
+            <CustomButtonText>
+              Login
+            </CustomButtonText>
+          </CustomButton>
+        </InputArea>
+        <SignMessageButton>
+          <SignMessageButtonText>
+            Ainda não possui uma conta?
+          </SignMessageButtonText>
+          <SignMessageButtonTextBold>
+            Cadastre-se
+          </SignMessageButtonTextBold>
+        </SignMessageButton>
+      </Container>
+    </Wrapper>
   )
 }
 
