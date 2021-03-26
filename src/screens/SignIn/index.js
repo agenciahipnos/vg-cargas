@@ -1,25 +1,33 @@
 import React, { useState } from 'react'
+import { useNavigation } from '@react-navigation/native'
 import {
   Wrapper,
   Container,
   LogoContent,
   InputArea,
   RecoverPasswordText,
-  CustomButton,
-  CustomButtonText,
   SignMessageButton,
   SignMessageButtonText,
   SignMessageButtonTextBold
 } from './styles'
 import SignInput from '../../components/SignInput'
+import SignButton from '../../components/SignButton'
 
 import Logo from '../../assets/logo.svg'
 import Email from '../../assets/email.svg'
 import Password from '../../assets/lock.svg'
 
 const SignIn = () => {
+  const navigation = useNavigation()
+
   const [emailField, setEmailField] = useState('')
   const [passwordField, setPasswordField] = useState('')
+
+  const handleSignUp = () => {
+    navigation.reset({
+      routes: [{ name: 'SignUpFirstStep' }]
+    })
+  }
 
   return (
     <Wrapper>
@@ -28,6 +36,7 @@ const SignIn = () => {
           <Logo 
             width="129"
             height="84" 
+            fill="#FFFFFF"
           />
         </LogoContent>
         <InputArea>
@@ -47,13 +56,11 @@ const SignIn = () => {
           <RecoverPasswordText>
             Esqueceu sua senha?
           </RecoverPasswordText>
-          <CustomButton>
-            <CustomButtonText>
-              Login
-            </CustomButtonText>
-          </CustomButton>
+          <SignButton>
+            Login
+          </SignButton>
         </InputArea>
-        <SignMessageButton>
+        <SignMessageButton onPress={handleSignUp}>
           <SignMessageButtonText>
             Ainda não possui uma conta?
           </SignMessageButtonText>
