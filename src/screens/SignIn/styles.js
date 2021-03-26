@@ -28,21 +28,6 @@ export const RecoverPasswordText = styled.Text`
   opacity: 0.8;
 `
 
-export const CustomButton = styled.View`
-  height: 60px;
-  background-color: #252832;
-  border-radius: 30px;
-  justify-content: center;
-  align-items: center;
-`
-
-export const CustomButtonText = styled.Text`
-  font-size: 16px;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #FFA037;
-`
-
 export const SignMessageButton = styled.TouchableOpacity`
   justify-content: center;
   margin-bottom: 40px;
