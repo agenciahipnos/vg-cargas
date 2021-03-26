@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import Preload from '../screens/Preload'
 import SignIn from '../screens/SignIn'
+import SignUpFirstStep from '../screens/SignUpFirstStep'
 
 const Stack = createStackNavigator()
 
@@ -19,6 +20,7 @@ const MainStack = () => {
       >
         <Stack.Screen name="Preload" component={Preload} />
         <Stack.Screen name="SignIn" component={SignIn} />
+        <Stack.Screen name="SignUpFirstStep" component={SignUpFirstStep} />
       </Stack.Navigator>
     </>
   )
