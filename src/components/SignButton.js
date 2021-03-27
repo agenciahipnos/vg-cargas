@@ -3,7 +3,7 @@ import styled from 'styled-components/native'
 
 export const CustomButton = styled.View`
   height: 60px;
-  background-color: #252832;
+  background-color: #FFA037;
   border-radius: 30px;
   justify-content: center;
   align-items: center;
@@ -13,7 +13,7 @@ export const CustomButtonText = styled.Text`
   font-size: 16px;
   text-transform: uppercase;
   font-weight: bold;
-  color: #FFA037;
+  color: #FFFFFF;
 `
 
 const SignButton = ({ children }) => {
