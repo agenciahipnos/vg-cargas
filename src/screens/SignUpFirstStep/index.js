@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { StyleSheet } from 'react-native'
 
 import { 
   Container,
@@ -16,10 +17,10 @@ import {
 import Info from '../../assets/info.svg'
 import Localizacao from '../../assets/localizacao.svg'
 import Veiculo from '../../assets/veiculo.svg'
-import Email from '../../assets/email.svg'
 
-import SignInput from '../../components/SignInput'
+import SignUpInput from '../../components/SignUpInput'
 import SignButton from '../../components/SignButton'
+import LineButton from '../../components/LineButton'
 
 const SignUpFirstStep = () => {
   const [nameField, setNameField] = useState('')
@@ -73,49 +74,47 @@ const SignUpFirstStep = () => {
             Vamos começar coletando algumas informações básicas sobre você.
           </HeaderText>
           <InputArea>
-            <SignInput 
-              IconSvg={Email}
-              placeholder="Nome Completo"
+            <SignUpInput 
+              label="Nome Completo"
               value={nameField}
               onChangeText={(text) => setNameField(text)}
             />
-            <SignInput 
-              IconSvg={Email}
-              placeholder="CPF"
+            <SignUpInput 
+              label="CPF"
               value={cpfField}
               onChangeText={(text) => setCpfField(text)}
             />
-            <SignInput 
-              IconSvg={Email}
-              placeholder="E-mail"
+            <SignUpInput 
+              label="E-mail"
               value={emailField}
               onChangeText={(text) => setEmailField(text)}
             />
-            <SignInput 
-              IconSvg={Email}
-              placeholder="Senha"
+            <SignUpInput 
+              label="Senha"
               value={passwordField}
               onChangeText={(text) => passwordConfirmationField(text)}
+              password={true}
             />
-            <SignInput 
-              IconSvg={Email}
-              placeholder="Confirme a Senha"
+            <SignUpInput 
+              label="Confirme a Senha"
               value={passwordConfirmationField}
               onChangeText={(text) => setPasswordConfirmationField(text)}
+              password={true}
             />
-            <SignInput 
-              IconSvg={Email}
-              placeholder="Data de Nascimento"
+            <SignUpInput 
+              label="Data de Nascimento"
               value={birthdateField}
               onChangeText={(text) => setBirthdateField(text)}
             />
-            <SignInput 
-              IconSvg={Email}
-              placeholder="Carteira de Motorista"
+            <SignUpInput 
+              label="Carteira de Motorista"
               value={cnhField}
               onChangeText={(text) => setCnhField(text)}
             />
           </InputArea>
+          <LineButton>
+            Voltar
+          </LineButton>
           <SignButton>
             Próximo
           </SignButton>
