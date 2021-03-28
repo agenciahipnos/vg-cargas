@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components/native'
 
-export const CustomButton = styled.View`
+export const CustomButton = styled.TouchableOpacity`
   height: 60px;
   border: 2px solid #FFA037;
   border-radius: 30px;
@@ -17,9 +17,9 @@ export const CustomButtonText = styled.Text`
   color: #FFA037;
 `
 
-const LineButton = ({ children }) => {
+const LineButton = ({ children, onPress }) => {
   return (
-    <CustomButton>
+    <CustomButton onPress={onPress}>
       <CustomButtonText>
         { children }
       </CustomButtonText>
