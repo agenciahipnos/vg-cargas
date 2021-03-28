@@ -1,28 +1,20 @@
 import React, { useState } from 'react'
-import { StyleSheet } from 'react-native'
-
+import { useNavigation } from '@react-navigation/native'
 import { 
   Container,
   Scroller,
   ScrollerContainer,
-  HeaderSteps,
-  BoxIcon,
-  IconText,
-  BoxStepLine,
-  StepLine,
   InputArea,
   HeaderText
 } from './styles'
 
-import Info from '../../assets/info.svg'
-import Localizacao from '../../assets/localizacao.svg'
-import Veiculo from '../../assets/veiculo.svg'
-
 import SignUpInput from '../../components/SignUpInput'
 import SignButton from '../../components/SignButton'
 import LineButton from '../../components/LineButton'
+import HeaderSteps from '../../components/HeaderSteps'
 
 const SignUpFirstStep = () => {
+  const navigation = useNavigation()
   const [nameField, setNameField] = useState('')
   const [cpfField, setCpfField] = useState('')
   const [emailField, setEmailField] = useState('')
@@ -31,45 +23,19 @@ const SignUpFirstStep = () => {
   const [birthdateField, setBirthdateField] = useState('')
   const [cnhField, setCnhField] = useState('')
 
+  const handleVoltar = () => {
+    navigation.navigate('SignIn')
+  }
+
+  const handleProximo = () => {
+    navigation.navigate('SignUpSecondStep')
+  }
+
   return (
     <Container>
       <Scroller>
         <ScrollerContainer>
-          <HeaderSteps>
-            <BoxIcon>
-              <Info 
-                width="30.85"
-                height="27.56"
-              />
-              <IconText active={true}>
-                Informações básicas
-              </IconText>
-            </BoxIcon>
-            <BoxStepLine>
-              <StepLine active={false} />
-            </BoxStepLine>
-            <BoxIcon>
-              <Localizacao 
-                width="32.94"
-                height="33"
-              />
-              <IconText active={false}>
-                Localização
-              </IconText>
-            </BoxIcon>
-            <BoxStepLine>
-              <StepLine active={false} />
-            </BoxStepLine>
-            <BoxIcon>
-              <Veiculo 
-                width="37"
-                height="37"
-              />
-              <IconText active={false}>
-                Veículo
-              </IconText>
-            </BoxIcon>
-          </HeaderSteps>
+          <HeaderSteps step={1} />
           <HeaderText>
             Vamos começar coletando algumas informações básicas sobre você.
           </HeaderText>
@@ -92,7 +58,7 @@ const SignUpFirstStep = () => {
             <SignUpInput 
               label="Senha"
               value={passwordField}
-              onChangeText={(text) => passwordConfirmationField(text)}
+              onChangeText={(text) => setPasswordField(text)}
               password={true}
             />
             <SignUpInput 
@@ -112,10 +78,14 @@ const SignUpFirstStep = () => {
               onChangeText={(text) => setCnhField(text)}
             />
           </InputArea>
-          <LineButton>
+          <LineButton
+            onPress={handleVoltar}
+          >
             Voltar
           </LineButton>
-          <SignButton>
+          <SignButton
+            onPress={handleProximo}
+          >
             Próximo
           </SignButton>
         </ScrollerContainer>
