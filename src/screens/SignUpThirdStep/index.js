@@ -13,7 +13,7 @@ import SignUpInput from '../../components/SignUpInput'
 import LineButton from '../../components/LineButton'
 import SignButton from '../../components/SignButton'
 
-const SingUpThirdStep = () => {
+const SingUpThirdStep = () => { 
   const navigation = useNavigation()
 
   const [modeloField, setModeloField] = useState('')
