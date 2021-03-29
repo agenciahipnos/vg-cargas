@@ -21,7 +21,7 @@ const SingUpThirdStep = () => {
   const [anoField, setAnoField] = useState('')
   const [capacidadeField, setCapacidadeField] = useState('')
   const [categoriaField, setCategoriaField] = useState('')
-  const [placaField, setPlacaField] = useState('')
+  const [placaField, setPlacaField] = useState('') 
   const [carroceriaField, setCarroceriaField] = useState('')
   const [AnttField, setAnttField] = useState('')
 
@@ -30,7 +30,7 @@ const SingUpThirdStep = () => {
   }
 
   const handleProximo = () => {
-    
+
   }
 
   return (
