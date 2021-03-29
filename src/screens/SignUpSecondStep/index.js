@@ -4,7 +4,7 @@ import {
   Container,
   Scroller,
   ScrollerContainer,
-  HeaderText,
+  HeaderText, 
   InputArea
 } from './styles'
 
