@@ -15,7 +15,7 @@ import HeaderSteps from '../../components/HeaderSteps'
 
 const SignUpFirstStep = () => {
   const navigation = useNavigation()
-  
+
   const [nameField, setNameField] = useState('')
   const [cpfField, setCpfField] = useState('')
   const [emailField, setEmailField] = useState('')
@@ -84,7 +84,7 @@ const SignUpFirstStep = () => {
           >
             Voltar
           </LineButton>
-          <SignButton
+          <SignButton 
             onPress={handleProximo}
           >
             Próximo
