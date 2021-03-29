@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useNavigation } from '@react-navigation/native'
 import {
   Container,
   Scroller,
@@ -13,11 +14,21 @@ import LineButton from '../../components/LineButton'
 import SignButton from '../../components/SignButton'
 
 const SignUpSecondStep = () => {
+  const navigation = useNavigation()
+
   const [cepField, setCepField] = useState('')
   const [estadoField, setEstadoField] = useState('')
   const [cidadeField, setCidadeField] = useState('')
   const [bairroField, setBairroField] = useState('')
   const [enderecoField, setEnderecoField] = useState('')
+
+  const handleVoltar = () => {
+    navigation.navigate('SignUpFirstStep')
+  }
+
+  const handleProximo = () => {
+    navigation.navigate('SignUpThirdStep')
+  }
 
   return (
     <Container>
@@ -54,10 +65,14 @@ const SignUpSecondStep = () => {
               onChangeText={(text) => setEnderecoField(text)}
             />
           </InputArea>
-          <LineButton>
+          <LineButton
+            onPress={handleVoltar}
+          >
             Voltar
           </LineButton>
-          <SignButton>
+          <SignButton
+            onPress={handleProximo}
+          >
             Próximo
           </SignButton>
         </ScrollerContainer>
