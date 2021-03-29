@@ -2,7 +2,7 @@ import React from 'react'
 import { StatusBar } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack'
 
-import Preload from '../screens/Preload'
+import Preload from '../screens/Preload' 
 import SignIn from '../screens/SignIn'
 
 import SignUpFirstStep from '../screens/SignUpFirstStep'
