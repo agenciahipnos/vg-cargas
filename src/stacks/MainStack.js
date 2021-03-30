@@ -9,6 +9,8 @@ import SignUpFirstStep from '../screens/SignUpFirstStep'
 import SignUpSecondStep from '../screens/SignUpSecondStep'
 import SingUpThirdStep from '../screens/SignUpThirdStep'
 
+import UsuarioTab from './UsuarioTab'
+
 const Stack = createStackNavigator()
 
 const MainStack = () => {
@@ -28,6 +30,7 @@ const MainStack = () => {
         <Stack.Screen name="SignUpFirstStep" component={SignUpFirstStep} />
         <Stack.Screen name="SignUpSecondStep" component={SignUpSecondStep} />
         <Stack.Screen name="SignUpThirdStep" component={SingUpThirdStep} />
+        <Stack.Screen name="UsuarioTab" component={UsuarioTab} />
 
       </Stack.Navigator>
     </>
