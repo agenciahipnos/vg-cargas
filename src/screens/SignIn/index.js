@@ -23,6 +23,12 @@ const SignIn = () => {
   const [emailField, setEmailField] = useState('')
   const [passwordField, setPasswordField] = useState('')
 
+  const handleSignIn = () => {
+    navigation.reset({
+      routes: [{ name: 'UsuarioTab' }]
+    })
+  }
+
   const handleSignUp = () => {
     navigation.reset({
       routes: [{ name: 'SignUpFirstStep' }]
@@ -56,7 +62,7 @@ const SignIn = () => {
           <RecoverPasswordText>
             Esqueceu sua senha?
           </RecoverPasswordText>
-          <SignButton>
+          <SignButton onPress={handleSignIn}>
             Login
           </SignButton>
         </InputArea>
