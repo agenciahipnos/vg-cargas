@@ -30,7 +30,9 @@ const SingUpThirdStep = () => {
   }
 
   const handleProximo = () => {
-
+    navigation.reset({
+      routes: [{ name: 'UsuarioTab' }]
+    })
   }
 
   return (
