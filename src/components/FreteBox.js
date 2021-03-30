@@ -40,11 +40,8 @@ const ProdutoTextBold = styled.Text`
 `
 
 const ValorText = styled.Text`
-
-`
-
-const ValorTextBold = styled.Text`
   font-weight: bold;
+  color: green;
 `
 
 const RightSide = styled.View`
@@ -52,11 +49,13 @@ const RightSide = styled.View`
 `
 
 const ButtonVisualizar = styled.View`
-
+  background-color: #FFA037;
+  padding: 10px 14px;
+  border-radius: 20px;
 `
 
 const ButtonText = styled.Text`
-  
+  color: #fff;
 `
 
 const FreteBox = ({ produto }) => {
@@ -79,10 +78,7 @@ const FreteBox = ({ produto }) => {
             { " " + produto }
           </ProdutoText>
           <ValorText>
-            <ValorTextBold>
-              Valor: 
-            </ValorTextBold>
-            {" "} R$ 2.800,00
+            R$ 2.800,00
           </ValorText>
         </ContentInfo>
       </LeftSide>
