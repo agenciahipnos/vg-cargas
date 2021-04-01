@@ -6,6 +6,7 @@ import Home from '../screens/Home'
 import Fretes from '../screens/Fretes'
 import Perfil from '../screens/Perfil'
 import Opcoes from '../screens/Opcoes'
+import VisualizarFrete from '../screens/VisualizarFrete'
 
 const Tab = createBottomTabNavigator()
 
@@ -16,6 +17,7 @@ const UsuarioTab = () => {
       <Tab.Screen name="Fretes" component={Fretes} />
       <Tab.Screen name="Perfil" component={Perfil} />
       <Tab.Screen name="Opcoes" component={Opcoes} />
+      <Tab.Screen name="VisualizarFrete" component={VisualizarFrete} />
     </Tab.Navigator>
   )
 }
