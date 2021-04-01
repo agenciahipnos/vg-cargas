@@ -58,9 +58,11 @@ const ButtonText = styled.Text`
   color: #fff;
 `
 
-const FreteBox = ({ produto }) => {
+const FreteBox = ({ produto, onPress }) => {
   return (
-    <Container>
+    <Container
+      onPress={onPress}
+    >
       <LeftSide>
         <ContentTexto>
           <TextoPrincipal>
