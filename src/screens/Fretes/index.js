@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-
+import { useNavigation } from '@react-navigation/native'
 import {
   Container,
   Scroller,
@@ -14,7 +14,15 @@ import HeaderUsuario from '../../components/HeaderUsuario'
 import FreteBox from '../../components/FreteBox'
 
 const Home = () => {
+  const navigation = useNavigation()
   const [menuPress, setMenuPress] = useState(1)
+  const i = [1, 2, 3, 4, 5]
+
+  const handleVisitFrete = (id) => {
+    navigation.navigate('VisualizarFrete', {
+      id
+    })
+  }
 
   return (
     <Container>
@@ -47,39 +55,17 @@ const Home = () => {
         {
           menuPress === 1 ?
             <FreteContainer>
-              <FreteBox 
-                produto="Granito"
-              />
-              <FreteBox 
-                produto="Granito"
-              />
-              <FreteBox 
-                produto="Granito"
-              />
-              <FreteBox 
-                produto="Granito"
-              />
-              <FreteBox 
-                produto="Granito"
-              />
-              <FreteBox 
-                produto="Granito"
-              />
-              <FreteBox 
-                produto="Granito"
-              />
-              <FreteBox 
-                produto="Granito"
-              />
-              <FreteBox 
-                produto="Granito"
-              />
-              <FreteBox 
-                produto="Granito"
-              />
-              <FreteBox 
-                produto="Madeira"
-              />
+              {
+                i.map((key) => {
+                  return (
+                    <FreteBox 
+                      key={key}
+                      produto="Granito"
+                      onPress={() => handleVisitFrete(key)}
+                    />
+                  )
+                })
+              }
             </FreteContainer>
           :
           <FreteContainer>
