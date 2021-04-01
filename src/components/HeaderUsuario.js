@@ -1,8 +1,10 @@
 import React from 'react'
+import { TouchableOpacity } from 'react-native'
 import styled from 'styled-components/native'
 
 import Person from '../assets/person.svg'
 import LogoIcon from '../assets/logo-icon.svg'
+import BackIcon from '../assets/left-arrow.svg'
 
 const Container = styled.View`
   flex-direction: row;
@@ -52,11 +54,19 @@ const NotificationNumber = styled.Text`
   font-size: 10px;
 `
 
-const HeaderUsuario = ({ children }) => {
+const HeaderUsuario = ({ children, voltar = false, handleVoltar}) => {
   return (
     <Container>
       <LogoContent>
-        <LogoIcon width="53" height="40" />
+        {
+          !voltar ? <LogoIcon width="53" height="40" /> 
+          : 
+          <TouchableOpacity
+            onPress={handleVoltar}
+          >
+            <BackIcon width="22" height="22" fill="#222" />
+          </TouchableOpacity>
+        }
       </LogoContent>
       <TitleContent>
         <HeaderTitle>
