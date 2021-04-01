@@ -45,9 +45,9 @@ const CustomTabBar = ({ state, navigation }) => {
       </TabItem>
       <TabItem onPress={() => goTo('Fretes')}>
         {
-          state.index === 1 ? <FretesIconActive width="20" height="20" /> : <FretesIcon width="20" height="20" />
+          state.index === 1 || state.index === 4 ? <FretesIconActive width="20" height="20" /> : <FretesIcon width="20" height="20" />
         }
-        <IconTitle style={{color: state.index === 1 ? '#FFA037' : '#444a5c'}}>
+        <IconTitle style={{color: state.index === 1 || state.index === 4 ? '#FFA037' : '#444a5c'}}>
           Fretes
         </IconTitle>
       </TabItem>
