@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components/native'
-
+ 
 import PrincipalIcon from '../assets/menu/principal.svg'
 import PrincipalIconActive from '../assets/menu/principal-active.svg'
 import FretesIcon from '../assets/menu/fretes.svg'
