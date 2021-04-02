@@ -7,7 +7,7 @@ import {
   InputArea,
   HeaderText
 } from './styles'
-
+ 
 import SignUpInput from '../../components/SignUpInput'
 import SignButton from '../../components/SignButton'
 import LineButton from '../../components/LineButton'
