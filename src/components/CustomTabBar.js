@@ -10,7 +10,7 @@ import PerfilIconActive from '../assets/menu/perfil-active.svg'
 import OpcoesIcon from '../assets/menu/opcoes.svg'
 import OpcoesIconActive from '../assets/menu/opcoes-active.svg'
 
-const TabArea = styled.View`
+const TabArea = styled.View` 
   height: 60px;
   background-color: #FFFFFF;
   flex-direction: row;
