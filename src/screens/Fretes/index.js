@@ -13,7 +13,7 @@ import {
 import HeaderUsuario from '../../components/HeaderUsuario'
 import FreteBox from '../../components/FreteBox'
 
-const Home = () => {
+const Home = () => { 
   const navigation = useNavigation()
   const [menuPress, setMenuPress] = useState(1)
   const i = [1, 2, 3, 4, 5]
