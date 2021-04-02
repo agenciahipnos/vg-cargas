@@ -41,7 +41,7 @@ const ProdutoTextBold = styled.Text`
 
 const ValorText = styled.Text`
   font-weight: bold;
-  color: green;
+  color: green; 
 `
 
 const RightSide = styled.View`
