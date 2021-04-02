@@ -7,7 +7,7 @@ import Fretes from '../screens/Fretes'
 import Perfil from '../screens/Perfil'
 import Opcoes from '../screens/Opcoes'
 import VisualizarFrete from '../screens/VisualizarFrete'
-
+ 
 const Tab = createBottomTabNavigator()
 
 const UsuarioTab = () => {
