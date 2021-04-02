@@ -119,7 +119,7 @@ export const CargaInfoSubtitle = styled.Text`
   color: #777;
 `
 
-export const ObservacaoView = styled.View`
+export const ObservacaoView = styled.View` 
   margin-bottom: 40px;
 `
 
