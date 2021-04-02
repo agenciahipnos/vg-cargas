@@ -51,7 +51,7 @@ const NotificationContainer = styled.View`
 
 const NotificationNumber = styled.Text`
   color: #fff;
-  font-size: 10px;
+  font-size: 10px; 
 `
 
 const HeaderUsuario = ({ children, voltar = false, handleVoltar}) => {
