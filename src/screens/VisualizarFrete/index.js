@@ -143,7 +143,7 @@ const VisualizarFrete = ({ route, navigation }) => {
           </BoxCargaInfo>
           <BoxCargaInfo>
             <CargaInfoTitle>
-              Peso da carga
+              Peso da carga 
             </CargaInfoTitle>
             <CargaInfoSubtitle>
               Truck
