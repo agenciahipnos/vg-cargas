@@ -48,7 +48,7 @@ const RightSide = styled.View`
 
 `
 
-const ButtonVisualizar = styled.View`
+const ButtonVisualizar = styled.View` 
   background-color: #FFA037;
   padding: 10px 14px;
   border-radius: 20px;
